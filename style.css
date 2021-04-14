@@ -1,0 +1,100 @@
+
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #feb386;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #feb386;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px;
+  margin: 0 30px;
+}
+}
+
+table.table-2 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+table.table-2 tr {
+	background-color: #f8f8f8;
+}
+table.table-2 th, table.table-2 td {
+	text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+table.table-2 th{
+	font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+	table.table-2 tr{
+		display: block;
+	}
+	table.table-2 tr{
+		margin-bottom: 30px;
+	}
+	table.table-2 th, table.table-2 td{
+		display: block;
+		text-align: center;
+	}
+
+  .photos {
+  	text-align: center;
+  	margin: 0 0 20px 0;
+  	overflow: hidden;
+  }
+  .photos a {
+  	width: 25%;
+  	display: block;
+  	float: left;
+  	line-height: 0;
+  }
+  .photos img {
+  	width: 100%;
+  	height: auto;
+  }
+}
+
+  @media screen and (max-width: 800px) {
+  	.photos a {
+  		width: 100%;
+  		float: none;
+  	}
+  }
